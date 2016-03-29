@@ -36,10 +36,10 @@ void show_info(struct utmp *utbufp)
 	printf(" ");
 	printf("%-8.8s",utbufp->ut_line);
 	printf(" ");
-	printf("time:%s", ctime(&(utbufp->ut_tv.tv_sec)));
+	printf("%s", ctime(&(utbufp->ut_tv.tv_sec)));
 	printf(" ");
 	#ifdef SHOWHOST
-	printf("( remote host:%s )", utbufp->ut_host);
+	printf("( %s )", utbufp->ut_host);
 	#endif
 	printf("\n");
 }
